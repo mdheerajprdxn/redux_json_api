@@ -3,7 +3,6 @@ import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { List } from "./List";
 import UserDetail from "./UserDetail";
-import "./App.css";
 
 export const App = () => {
   return (
