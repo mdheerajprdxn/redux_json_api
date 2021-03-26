@@ -41,6 +41,8 @@ export const List = (props) => {
   // calc no of pages when users array is populated
   useEffect(() => {
     setNoOfPages(users.length / USERS_PER_PAGE);
+    setCurrentUsers(users.slice(0, USERS_PER_PAGE));
+    setPageNo(1);
   }, [users]);
 
   const pageList = () => {
