@@ -1,18 +1,18 @@
 import React from "react";
 import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import { NavBar } from "./NavBar";
+import { Modal } from "./Modal";
 import { List } from "./List";
 import UserDetail from "./UserDetail";
+
+import "./App.css";
 
 export const App = () => {
   return (
     <div>
       <Router>
-        <div className='ui menu'>
-          <div className='header item'>
-            <Link to='/'>Home</Link>
-          </div>
-        </div>
+        <NavBar />
         <div className='ui container'>
           <Switch>
             <Route path='/' exact>

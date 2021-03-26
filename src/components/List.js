@@ -34,11 +34,7 @@ export const List = (props) => {
   });
 
   useEffect(() => {
-    console.log("here");
     setCurrentUsers(users.slice(startIndex, startIndex + USERS_PER_PAGE));
-    console.log(users);
-    console.log(users.slice(startIndex, startIndex + USERS_PER_PAGE));
-    console.log(currentUsers);
   }, [startIndex]);
 
   // calc no of pages when users array is populated
@@ -54,7 +50,7 @@ export const List = (props) => {
     let next = parseInt(pageNo) + 1;
     if (prev > 0) {
       pageArr.push(
-        <Link to={`/users/${prev}`} className='ui primary button'>
+        <Link key={prev} to={`/users/${prev}`} className='ui primary button'>
           Prev
         </Link>
       );
@@ -70,7 +66,7 @@ export const List = (props) => {
     }
     if (next <= noOfPages) {
       pageArr.push(
-        <Link to={`/users/${next}`} className='ui primary button'>
+        <Link key={prev} to={`/users/${next}`} className='ui primary button'>
           Next
         </Link>
       );

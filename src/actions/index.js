@@ -21,3 +21,11 @@ export const fetchUser = (id) => {
     });
   };
 };
+
+export const addData = (form) => {
+  console.log(form);
+  return {
+    type: "SUBMIT_FORM",
+    payload: form,
+  };
+};
