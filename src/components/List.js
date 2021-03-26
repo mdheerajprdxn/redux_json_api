@@ -23,6 +23,9 @@ export const List = (props) => {
   useEffect(() => {
     if (props.match) {
       setPageNo(props.match.params.pageNo);
+    } else {
+      setStartIndex(0);
+      setPageNo(1);
     }
     if (pageNo > 0) {
       const startIndex = (pageNo - 1) * USERS_PER_PAGE;
