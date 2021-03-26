@@ -19,6 +19,10 @@ export const App = () => {
               <List />
             </Route>
             <Route
+              path='/users/:pageNo'
+              render={(props) => <List {...props} />}
+            />
+            <Route
               path='/user/:id'
               render={(props) => <UserDetail {...props} />}
             />
